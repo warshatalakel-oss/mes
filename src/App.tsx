@@ -5,7 +5,7 @@ import MainApp from './MainApp.tsx';
 import AdminDashboard from './components/admin/AdminDashboard.tsx';
 import CounselorApp from './components/counselor/CounselorApp.tsx';
 import { LogIn, Loader2, RefreshCw, AlertTriangle } from 'lucide-react';
-import StudentApp from './hooks/student/StudentApp.tsx';
+import StudentApp from './components/student/StudentApp.tsx';
 
 export default function App(): React.ReactNode {
     const { currentUser, users, login, logout, addUser, updateUser, deleteUser, isAuthReady, authError } = useAuth();

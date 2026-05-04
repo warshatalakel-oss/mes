@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      base: './',
       server: {
         port: 3000,
         host: '0.0.0.0',
@@ -20,10 +21,7 @@ export default defineConfig(({ mode }) => {
       },
       resolve: {
         alias: {
-          // FIX: Replaced `__dirname` with `'./'` to resolve from the current working directory,
-          // which is the project root when running Vite. This fixes the "Cannot find name '__dirname'" error
-          // that occurs in ESM-like environments where `__dirname` is not available.
-          '@': path.resolve('./'),
+          '@': path.resolve('./src'),
         }
       }
     };
